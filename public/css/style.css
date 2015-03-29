@@ -1,0 +1,14 @@
+.comment {
+    margin: 0.5vh;
+    color: #FFFFFF;
+}
+
+.comment strong {
+    background-color: none;
+}
+.comment:nth-child(odd) {
+    background-color: #3f51b5;
+}
+.comment:nth-child(even) {
+    background-color: #9e9e9e;
+}

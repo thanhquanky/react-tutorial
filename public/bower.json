@@ -1,0 +1,9 @@
+{
+    "name": "React Tutorial",
+    "author": "Thanh Ky Quan",
+    "dependencies": {
+        "react": "0.13.1",
+        "jquery": "latest",
+        "bootstrap": "latest"
+    }
+}

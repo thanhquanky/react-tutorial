@@ -3,9 +3,14 @@
 
   <head>
     <title>Hello React</title>
-    <script src="https://fb.me/react-0.13.1.js"></script>
-    <script src="https://fb.me/JSXTransformer-0.13.1.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="bower_components/react/react.min.js"></script>
+    <script src="bower_components/react/JSXTransformer.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
     <script type="text/jsx" src="scripts/Comment.jsx"></script>
     <script type="text/jsx" src="scripts/CommentList.jsx"></script>
@@ -14,17 +19,15 @@
   </head>
 
   <body>
-    <div id="content"></div>
-    <script type="text/jsx">
-        var data = [
-            {author: "Thanh Quan", text: "Thanh's first comment"},
-            {author: "Kha Do", text: "Let's fly somewhere"}
-        ];
-        React.render(
-            <CommentBox url="comments.json"/>,
-            document.getElementById('content')
-        );
-    </script>
+        <div id="container"class="container-fluid">
+            <div id="content"></div>
+        </div>
+        <script type="text/jsx">
+            React.render(
+                <CommentBox url="comments.json" pollInteval={5000}/>,
+                document.getElementById('content')
+            );
+        </script>
   </body>
 
 </html>
